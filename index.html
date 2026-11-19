@@ -155,13 +155,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 #musicFab{right:14px;display:none}
 #musicFab.show{display:grid}
 #musicFab.off .wave{display:none}
-.yt{position:fixed;left:12px;bottom:12px;z-index:85;width:200px;border-radius:14px;overflow:hidden;background:#3f0810;
-  box-shadow:0 10px 26px rgba(40,5,10,.4);border:1px solid rgba(236,212,154,.7);transform:translateY(calc(100% + 30px));opacity:0;pointer-events:none;
-  transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .5s}
-.yt.show{transform:none;opacity:1;pointer-events:auto}
-.yt-h{font-family:var(--sans);font-size:9.5px;letter-spacing:.12em;color:#f0d391;padding:7px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.yt-h span{display:inline-block;animation:twinkle 1.6s ease-in-out infinite}
-.yt iframe{display:block;width:200px;height:113px;border:0}
+.yt{position:fixed;left:0;bottom:0;width:1px;height:1px;overflow:hidden;opacity:.01;pointer-events:none;z-index:-1}
+.yt iframe{width:200px;height:113px;border:0}
 
 /* ================= HERO SCENE ================= */
 #hero{position:relative;background:#d8bf98}
@@ -631,7 +626,7 @@ footer .fm{font-style:italic;font-size:19px;color:#ecd6c2;margin-top:12px}
 </main>
 
 <!-- Wedding Nasheed — Muhammad Al Muqit, played through YouTube's official embedded player -->
-<div class="yt" id="ytWrap"><div class="yt-h"><span>♪</span> Wedding Nasheed · Muhammad Al Muqit</div><div id="ytPlayer"></div></div>
+<div class="yt" id="ytWrap" aria-hidden="true"><div id="ytPlayer"></div></div>
 
 
 <script>
